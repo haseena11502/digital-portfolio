@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Haseena Portfolio</title>
+<style>
+html {
+	min-height: 100%;
+}
+body{
+    font-family:Calibri, sans-serif;
+	font-size:1.1rem;
+    margin:0;
+    padding:0;
+    background-color:#f0f0f0;
+}
+header{
+    background-color:#00008B;
+	color:#fff;
+	text-align:center;
+	padding:2rem 0;
+	position:relative;
+	height:250px;
+	}
+.header-content h1{
+     font-size:3rem;
+	}
+.profile-picture{
+     width:255px;
+     height:auto;
+object-fit:color;
+position:absolute;
+left:22%;
+bottom:0;
+}
+nav{
+background-color:#00008B;
+color:#fff;
+text-align:center;
+}
+nav ul{
+list-style-type:none;
+padding:0;;
+}
+nav ul li a{
+text-decoration:none;
+color:#fff;
+}
+nav ul li{
+display:inline;;
+margin:0 20px;
+}
+.section-content{
+background-color:#fff;
+padding:2rem;
+margin:1rem;
+border-radius:20px;
+box-shadow:0 0 10px rgb(0,0,0,0.1);
+min-height: 185px;
+}
+.download-button{
+background-color:#00008B;
+color:#fff;
+padding:0.5rem 1rem;
+text-decoration:none;
+border-radius:20px;
+display:inline-block;
+margin-top:10px;
+}
+.download-button:hover{
+background-color:#555;
+}
+footer{
+text-align:center;
+padding:1rem 0;
+background-color:#00008B;
+color:#fff;
+bottom:0;
+}
+ul{
+list-style-type:disc;
+}
+</style>
+</head>
+<body>
+<header>
+<div class="header-content">
+<img src="Haseena.png" alt="Haseena" class="profile-picture">
+<h1>Haseena </h1>
+<p>Passionate Computer Science Student</p>
+</div>
+</header>
+<nav>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#achievements">Achievements</a></li>
+<li><a href="#resume">Resume</a></li>
+</ul>
+</nav>
+<section id="about">
+<div class="section-content">
+<h2>About Me</h2>
+<p>Hello, I am Haseena, a Final year BSc., CS student, based in Tamil Nadu.</p><p>I am pursuing my degree at Wavoo Wajeeha Women's college of Arts and Science.</p><p>Personally I love to be with my family and spend quality time with them.</p>
+</div>
+</section>
+<section id="education">
+<div class="section-content">
+<h2>Education</h2>
+<p>10th - 94%</p>
+<p>12th - 80.5%</p>
+<p>B.Sc.Computer science - Pursuing</p>
+</div>
+</section>
+<section id="skills">
+<div class="section-content">
+<h2>skills</h2>
+<ul>
+<li>HTML</li>
+<li>C++</li>
+<li>Java</li>
+</ul>
+</div>
+</section>
+<section id="achievements">
+<div class="section-content">
+<h2>Achievements</h2>
+<ul>
+<li>Topper in my department in all the semesters</li>
+<li>II Prize in Paper presentation on the topic Amazon GO</li>
+<li>II Prize in Poster presentation on the topic Hyperloop</li>
+</ul>
+</div>
+</section>
+<section id="resume">
+<center>
+<div class="section-content">
+<h2>Resume</h2>
+<a href="Haseena-resume.pdf" class="download-button" target="_blank">Download</a>
+</div>
+</center>
+</section>
+<footer>
+<p>&copy;2023 Haseena</p>
+</footer>
+<script>
+var about = document.getElementById("about");
+var education = document.getElementById("education");
+var skills = document.getElementById("skills");
+var achievements = document.getElementById("achievements");
+var resume = document.getElementById("resume");
+//about.style.display = "none";
+education.style.display = "none";
+skills.style.display = "none";
+achievements.style.display = "none";
+resume.style.display = "none";
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+	anchor.addEventListener('click', function(e) {
+		e.preventDefault();
+
+		const targetId = this.getAttribute('href').substring(1);
+		const targetElement = document.getElementById(targetId);
+
+		if (targetElement) {
+			about.style.display = "none";
+			education.style.display = "none";
+			skills.style.display = "none";
+			achievements.style.display = "none";
+			resume.style.display = "none";
+			targetElement.style.display = "block";
+			
+		}
+	});
+});
+    </script>
+	</body>
+	</html>
+
+
+ 
+	 
+	  
+
+ 
